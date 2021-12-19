@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.databindingsample.BR
 
 
-class BindingUtilAdapter(var items: MutableList<BindingAdapterItem>) : RecyclerView.Adapter<BindingUtilAdapter.BindingHolder>() {
+class BindingAdapter(var items: MutableList<BindingAdapterItem>) : RecyclerView.Adapter<BindingAdapter.BindingHolder>() {
 
     /**
      * @return 返回的是adapter的view
@@ -24,9 +24,9 @@ class BindingUtilAdapter(var items: MutableList<BindingAdapterItem>) : RecyclerV
         return BindingHolder(binding)
     }
 
-    /*
-    * 数据绑定
-    * */
+    /**
+     * 数据绑定
+     */
     override fun onBindViewHolder(holder: BindingHolder, position: Int) {
         holder.bindData(items[position])
     }

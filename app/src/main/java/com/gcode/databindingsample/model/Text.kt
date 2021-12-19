@@ -10,14 +10,8 @@ import com.example.databindingsample.R
  * @property text String
  * @constructor
  */
-class Text(val text: String):BaseObservable(), BindingAdapterItem {
+class Text(val text: String): BindingAdapterItem {
     override fun getViewType(): Int {
         return R.layout.text_item
-    }
-
-    @JvmName("getText1")
-    @Bindable
-    fun getText(): String {
-        return text
     }
 }
